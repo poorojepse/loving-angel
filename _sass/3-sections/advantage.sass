@@ -1,0 +1,64 @@
+#advantage   
+   border:
+      width: 1px 0px 
+      style: solid
+      color: $border
+      
+   .advantage-container     
+      @extend .bg-effect
+      background-color: $color-main
+      
+      .title
+         margin-bottom: 4rem
+      
+      .advantage-flex
+         +display(block)
+         text-align: center
+         margin-bottom: -3rem
+         
+         .flex-item
+            margin-bottom: 3rem
+            opacity: 0
+            +transition(1.5s)
+            
+            svg
+               +display(inline-block)
+               +size(50px auto)
+               fill: $color-alt
+               
+            .text
+               top: 50px
+               +position(relative)
+               +transition(1.5s)
+               
+               .sub-title
+                  margin: 1rem 0px .5rem
+               
+         &.animate-adv
+            .flex-item
+               opacity: 1
+               
+               .text
+                  top: 0px
+               
+
+@media screen and (min-width: 500px)
+   #advantage
+      .advantage-container   
+
+         .advantage-flex
+            +display(flex)
+            +justify-content(space-between)
+            +flex-wrap(wrap)
+            text-align: center
+
+            .flex-item
+               margin-top: 0px
+               +flex-basis(46%)
+
+@media screen and (min-width: 1200px)
+   #advantage
+      .advantage-container
+         .advantage-flex
+            .flex-item
+               +flex-basis(240px)

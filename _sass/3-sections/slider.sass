@@ -1,0 +1,129 @@
+#slider
+   text-align: center
+   background:
+      image: url('../img/bida-bg.jpg')
+      size: cover
+      repeat: no-repeat
+      position: -300px center
+      
+   .slide-container
+      text-align: left
+      height: 500px
+      
+      .slide-item
+         vertical-align: middle
+         margin-top: 8rem
+         +display(none)
+            
+         &.active-slide
+            +display(inline-block)
+         
+         .title
+            @extend .gigantic
+            margin-bottom: 22px
+            
+         p
+            @extend .large
+            +position(relative)
+            padding-left: 12px
+            
+            &:before
+               content: ''
+               margin-top: -3px
+               +position(absolute, 50% null null null)         
+               +size(6px)
+               margin-left: -12px
+               border-radius: 50%
+               background:
+                  color: $color-main
+            
+      .cta
+         +display(inline-block)
+         margin: 1rem 0px 0px 1.5rem
+         padding: .6rem 1rem .3rem
+         border: 1px solid $color-main
+         border-radius: 2px
+         cursor: pointer
+         
+   .controls-container
+      width: 8.889rem   
+      opacity: .8
+      margin-bottom:  .7rem
+      +display(inline-block)
+      
+      .prev
+         +display(block)
+         +size(0.6222rem)
+         border-radius: 50%
+         float: left
+         margin-top: .45rem
+         background-color: $color-main
+         cursor: pointer
+
+      .next
+         @extend .prev
+         float: right
+            
+      .thumb-container
+         background-color: $color-main
+         line-height: 0
+         padding: .2778rem .3889rem
+         text-align: center
+         border-radius: 0.8333rem
+         +display(inline-block)
+         cursor: pointer
+
+         .thumb-item
+            +size( 0.7222rem)
+            margin: 0px 3px
+            border-radius: 50%
+            +display(inline-block)
+            background-color: lighten($color-alt, 40)
+
+            &.active-thumb
+               background-color: $color-alt
+
+         
+@media screen and (min-width:  500px)
+   #slider
+      background-position: center top
+
+      .slide-container
+         height: 750px
+
+         .slide-item
+            margin-top: 0px
+            
+            .title
+               margin-bottom: 35px
+
+            p
+               padding-left: 16px
+
+               &:before
+                  margin-top: -4px
+                  +position(absolute, 50% null null null)         
+                  +size(8px)
+                  margin-left: -16px
+
+               &:nth-child(3)
+                  text-align: right
+
+         .cta
+            float: right
+            margin: .8rem 0px 0px
+            padding: .5rem 1.2rem
+
+            &:hover
+               border-color: $color-alt
+               color: $color-alt
+               background-color: $color-alt-light
+            
+            
+      .controls-container 
+         margin-bottom: 1.5rem
+         +transition()
+         
+         .next, .prev, .thumb-item
+            &:hover
+               background-color: $color-alt

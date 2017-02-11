@@ -1,0 +1,49 @@
+.vertical-middle
+   text-align: center
+   white-space: nowrap
+   
+   &:before
+      content: ''
+      height: 100%
+      +display(inline-block)
+      vertical-align: middle
+
+.title
+   color: $color-alt
+   text-align: center   
+   text-transform: uppercase
+
+.sub-title
+   font-size: 1.222rem
+   +display(inline-block)
+   text-transform: uppercase
+   
+.bg-effect
+   overflow: visible
+   margin: -.4rem .8rem -.4rem
+   z-index: 1
+   border:
+      width: 1px 0px
+      style: solid
+      color: $border
+
+   &:before
+      content: ''
+      z-index: -1
+      +position(absolute, -2rem -5px -2rem -5px)
+      background:
+         image: url('../img/tickle-east.png'), url('../img/tickle-west.png'), url('../img/tickle-east.png'), url('../img/tickle-west.png')
+         position: left top, right top, left bottom, right bottom
+         repeat: no-repeat
+         size: 5px auto
+         
+   @media screen and (min-width: 500px)
+      margin-left: auto
+      margin-right: auto
+         
+      &:before
+         top: -1.8rem
+         bottom: -1.8rem
+         left: -6px
+         right: -6px
+         background-size: 6px auto

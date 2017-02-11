@@ -1,0 +1,105 @@
+#footer
+   background-color: #222222
+   
+   *
+      color: darken($color-alt-light, 5)
+   
+      &:hover
+         color: $color-main
+   
+   .footer-container
+      padding-top: 3rem
+      padding-bottom: .5rem
+      
+      .footer-flex
+         +display(flex)
+         
+         .flex-item
+            .widget-title
+               text-transform: uppercase
+               
+            .ul-flex
+               +display(flex)
+               +flex-direction(column)
+               +flex-wrap(wrap)
+               max-height: 200px
+               
+               li
+                  list-style-type: none
+                  padding-left: 0px
+                  line-height: 1.6
+                  
+            .blurb
+               line-height: 1.6
+                  
+            .svg-wrapper
+               background-color: darken($color-alt-light, 5)
+               +size(27px)
+               margin: 0px auto 5px
+               +display(block)
+
+               svg
+                  fill: #392929
+                  +size(100%)
+                  
+         .services
+            +display(none)
+            +flex-basis(500px)
+            border-right: 1px solid darken($color-main, 5)
+            
+         .others-flex
+            +flex-grow(1)
+            +display(flex)
+            +justify-content(space-between)
+               
+      .footer-copyright
+         margin-top: 1.5rem
+      
+@media screen and (min-width: 500px)
+   #footer
+      .footer-container
+         .footer-flex
+            .flex-item
+               .svg-wrapper
+                  background-color: darken($color-alt-light, 5)
+                  +size(27px)
+                  margin-right: 5px
+                  +display(inline-block)
+         
+@media screen and (min-width: 992px)
+   #footer
+      background-color: #222222
+      
+      .footer-container
+         .footer-flex
+            .flex-item
+               .ul-flex
+                  li
+                     +display(inline-block)
+                     line-height: 1.4
+                  
+               .blurb
+                  line-height: 1.4
+
+               .svg-wrapper
+                  +size(32px)
+                  
+                  &:hover
+                     background-color: $color-main
+                  
+            .services
+               +display(block)
+               +flex-basis(400px)
+
+            .others-flex
+               padding-left: 2rem
+
+@media screen and (min-width: 1200px)
+   #footer            
+      .footer-container
+         .footer-flex
+            .services
+               +flex-basis(500px)
+
+            .others-flex
+               padding-left: 4rem

@@ -1,0 +1,44 @@
+#vis-mis
+   background-color: $color-alt-light
+   
+   .vis-mis-container
+      .vis-mis-flex
+         text-align: center
+         +display(block)
+         margin-bottom: -3rem
+            
+         .flex-item      
+            margin-bottom: 3rem
+            opacity: 0
+            +transition(1.5s)
+            
+            .blurb
+               margin-top: 1rem
+               font-size: 1rem
+               +position(relative)
+               top: 50px
+               +transition(1.5s)
+               
+         &.animate-vis-mis
+            .flex-item
+               opacity: 1
+               
+               .blurb
+                  top: 0px
+               
+@media screen and (min-width: 500px)
+   #vis-mis
+      .vis-mis-container
+         .vis-mis-flex
+            +display(flex)
+            +justify-content(space-around)
+            margin-bottom: 0px
+
+            .flex-item
+               +flex-basis(400px)
+               margin-bottom: 0px
+
+               .blurb
+                  margin-top: 2rem
+                  line-height: 1.6
+                  font-size: 1.2rem

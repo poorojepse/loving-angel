@@ -1,0 +1,143 @@
+#notify
+   @extend #advantage
+      
+   .notify-container
+      @extend .bg-effect
+      background-color: $color-main
+      margin-bottom: 0px
+      border-bottom: 0px
+      
+      &:before
+         background-image: url('../img/tickle-east.png'), url('../img/tickle-west.png'), none, none
+         bottom: 0px
+      
+      .notify-flex
+         +display(block)
+         +justify-content(space-around)
+            
+         .flex-item
+            +flex-basis(46%)
+            +position(relative)
+            text-align: center
+            +transition(1.5s)
+            opacity: 0
+               
+            .blurb
+               margin-top: 1rem
+               
+            form
+               fieldset, label
+                  border: 0px
+                  margin: 0px
+                  padding: 0px
+                  
+               .customer-email
+                  +display(flex)
+                     
+                  input
+                     +flex-grow(1)
+                     padding: .5rem
+                     border-radius: 3px 0px 0px 3px
+                     border:
+                        width: 1px
+                        style: solid
+                        color: $border
+                  a
+                     font-size: 1.38rem
+                     width: 105px
+                     text-align: center
+                     padding: .5rem
+                     border-radius: 0px 3px 3px 0px
+                     +display(inline-block)
+                     background-color: $color-sub
+                     color: $color-alt-light
+                     
+         .notify
+            right: 50px
+                     
+         .video
+            +display(block)
+            margin-top: 2rem
+            top: 50px
+
+            iframe
+               +display(block)
+               +size(100% 220px)
+               
+         &.animate-notify            
+            .flex-item
+               opacity: 1
+               
+            .notify
+               right: 0px
+               
+            .video
+               top: 0px
+               
+                     
+@media screen and (min-width: 500px)
+   #notify
+      .notify-container
+         &:before
+            background-image: url('../img/tickle-east.png'), url('../img/tickle-west.png'), none, none
+            bottom: 0px
+
+         .notify-flex
+            .flex-item
+               text-align: center
+
+               .blurb
+                  margin-top: 40px
+
+               form
+                  .customer-email
+                     a
+                        min-width: 150px
+                        border: 1px solid transparent
+                        
+                        &:hover
+                           color: $color-alt
+                           background-color: $color-alt-light
+                           border:
+                              width: 1px 1px 1px 0px
+                              style: solid
+                              color: $border
+
+            .video
+               +display(none)
+               
+@media screen and (min-width: 992px)                     
+   #notify
+      .notify-container
+         .notify-flex
+            +display(flex)
+            +justify-content(space-around)
+
+            .flex-item
+               +flex-basis(46%)
+               
+               .title, .blurb
+                  text-align: left
+
+               form
+                  .customer-email
+                     +display(flex)
+
+                     input
+                        +flex-grow(1)
+                        padding: .8rem
+                     a
+                        padding: .8rem
+
+            .video
+               +display(block)
+               +align-self(center)
+               text-align: center
+               margin-top: 0px
+               
+               iframe
+                  +display(inline-block)
+                  +size(400px 220px)
+
+
+
