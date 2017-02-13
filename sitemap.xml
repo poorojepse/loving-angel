@@ -1,0 +1,9 @@
+---
+---
+
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.8">
+   <url>
+      <loc>{{site.data.settings.website}}{{site.baseurl}}/</loc>
+      <priority>1.0</priority>
+   </url>
+</urlset>
