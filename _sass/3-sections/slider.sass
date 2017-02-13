@@ -46,13 +46,15 @@
          cursor: pointer
          
    .controls-container
-      +position(relative)
+      +position(relative, null null 12px 50%)
       z-index: 2
       width: 9.2rem   
       opacity: .8
-      margin-bottom:  .7rem
-      +display(inline-block)
+      margin-left: -4.1rem
       
+      &.controls-fixed
+         +position(fixed)
+         
       .prev
          +display(block)
          +size(.6rem)
@@ -123,9 +125,10 @@
             
             
       .controls-container 
-         margin-bottom: 1.5rem
-         +transition()
+         +transition(5)
          width: 10.5rem
+         bottom: 16px
+         margin-left: -5.25rem
          
          .next, .prev
             +size(.7rem)
