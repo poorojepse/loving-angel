@@ -4,6 +4,7 @@ $(document).ready( function() {
 
 $(document).scroll( function() {
    animate();
+   controlsFixed();
 })
 
 function animate() {
@@ -85,4 +86,19 @@ function slider() {
          }
       }
    });
+}
+
+function controlsFixed() {
+   var $this = $('.controls-container'),
+       thisHeight = $this.height(),
+       parentHeight = $this.parent().height(),
+       wHeight = $(window).height(),
+       ot = $(window).scrollTop();
+       
+   
+   if ( ot + wHeight > parentHeight) {
+      $this.removeClass('controls-fixed');
+   } else {
+      $this.addClass('controls-fixed');
+   }  
 }
