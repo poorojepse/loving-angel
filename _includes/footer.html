@@ -33,8 +33,8 @@
                   USA<br/ >
                   <br/ >
                   Hours: 8am - 8pm (Daily)<br/ >
-                  Tel No. +1-541-754-3010<br/ >
-                  Email: lovingangel271@gmail.com<br/ >
+                  Mobile No.: <a href='tel:{{site.data.settings.phone}}'>{{site.data.settings.phone}}</a><br/ >
+                  Email: <a href='mailto:{{site.data.settings.email}}'>{{site.data.settings.email}}</a><br/ >
                </p>
             </div>
 
@@ -52,7 +52,7 @@
 
             <div class='flex-item follow'>
                <h3 class='widget-title'>follow us on</h3>
-               <a class='svg-wrapper' href='#'>{% include icons/fb.html %}</a>
+               {% for fb in site.data.settings.social %}{% if fb.name == 'facebook' %}<a class='svg-wrapper' href='{{fb.link}}' target='_blank'>{% include icons/fb.html %}</a>{% endif %}{% endfor %}
                <a class='svg-wrapper' href='#'>{% include icons/insta.html %}</a>
                <a class='svg-wrapper' href='#'>{% include icons/twit.html %}</a>
             </div>
@@ -60,7 +60,7 @@
          </div>      
       </div>   
       <div class='footer-copyright'>
-         <span class='smaller'>© 2007 - 2017 Loving Angel Community. All rights reserved.</span>
+         <span class='smaller'>© Copyright 2017 <a href='{{site.data.settings.website-url}}'>{{site.data.settings.title}}</a> . Designed by <a href='/'>{{site.data.settings.author}}</a></span>
       </div>
    </div>
 </footer>

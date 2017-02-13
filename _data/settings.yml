@@ -1,16 +1,18 @@
-#Site Settings
+# Site Settings
 lang: 'en'
-author: AEDesign-Bohol
-title: ''
-subtitle: ''
-description: ''
-keywords: ''
+title: Loving Angel
+theme: Loving Angel Theme 
+author: 'AEDesign'
+description: 'This Theme was build only for practice purposes by AEDesign'
+keywords: 'Jekyll (Blog-aware, Static Site Generator) & Github, Github Pages & Website Design & PSD to HTML & Responsive Design & HTML, HTML5 &  CSS2, CSS3 & Js, Jquery & Sass/ SCSS & Adobe Photoshop & CMS for Static Site ( siteleaf, forestry, prose )'
+website: https://poorojepse.github.io/loving-angel/
 
-#Site Info
-email: 'lovingangel@gmail.com'
-website: ''
-addresss: ''
-phone: 'soon'
-mobile: 
- smart: '+63 923 913 2582'
- globe: '+63 859 961 8325'
+
+# Site Info
+email: aedesignbohol@gmail.com
+address: ''
+phone: '+63 956 812 8297'
+
+social:
+- { name: 'twitter', link: '/'}
+- { name: 'facebook', link: 'https://www.facebook.com/aedesignbohol/'}

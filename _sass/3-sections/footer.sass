@@ -2,10 +2,11 @@
    background-color: #222222
    
    *
-      color: darken($color-alt-light, 5)
-   
-      &:hover
-         color: $color-main
+      a, span, p
+         color: darken($color-alt-light, 5)
+
+         &:hover
+            color: $color-main
    
    .footer-container
       padding-top: 3rem
@@ -46,7 +47,7 @@
          .services
             +display(none)
             +flex-basis(500px)
-            border-right: 1px solid darken($color-main, 5)
+            border-right: 1px solid darken($color-alt-light, 5)
             
          .others-flex
             +flex-grow(1)
@@ -55,6 +56,11 @@
                
       .footer-copyright
          margin-top: 1.5rem
+         
+         a
+            @extend .smaller
+            +display(inline-block)
+            line-height: 1
       
 @media screen and (min-width: 500px)
    #footer
