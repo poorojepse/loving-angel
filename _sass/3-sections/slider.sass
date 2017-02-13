@@ -48,14 +48,14 @@
    .controls-container
       +position(relative)
       z-index: 2
-      width: 10.5rem   
+      width: 9.2rem   
       opacity: .8
       margin-bottom:  .7rem
       +display(inline-block)
       
       .prev
          +display(block)
-         +size(.8rem)
+         +size(.6rem)
          border-radius: 50%
          float: left
          margin-top: .45rem
@@ -76,7 +76,7 @@
          cursor: pointer
 
          .thumb-item
-            +size( 0.9rem)
+            +size( 0.7rem)
             margin: 0px .3rem
             border-radius: 50%
             +display(inline-block)
@@ -125,7 +125,15 @@
       .controls-container 
          margin-bottom: 1.5rem
          +transition()
+         width: 10.5rem
+         
+         .next, .prev
+            +size(.7rem)
          
          .next, .prev, .thumb-item
             &:hover
                background-color: $color-alt
+            
+         .thumb-container
+            .thumb-item
+               +size(.9rem)
